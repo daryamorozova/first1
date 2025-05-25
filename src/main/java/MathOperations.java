@@ -1,134 +1,130 @@
-import static java.lang.Math.abs;
-
 public class MathOperations {
 
-    // метод
+
     public static void main(String[] args) {
-        int sum1 = add(100, 2000);
-        System.out.println("1.1 Сумма " + sum1);
+        int sum1 = add(2, 6);
+        System.out.println("1.1. Сумма " + sum1);
 
-        int sub1 = subtract(5, 2);
-        System.out.println("1.2 Разность " + sub1);
+        int sub1 = subtract(5, 10);
+        System.out.println("1.2. Разность " + sub1);
 
-        int mult1 = multiply(3, 3);
-        System.out.println("1.3 Произведение " + mult1);
+        int mult1 = multiply(5, 10);
+        System.out.println("1.3. Произведение " + mult1);
 
-        double div1 = divide(3, 2);
-        System.out.println("1.4 Частное " + div1);
+        double div1 = divide(6, 4);
+        System.out.println("1.4. Частное " + div1);
 
-        int max1 = findMax(-7, 2);
-        System.out.println("2. Максимум " + max1);
+        int max1 = findMax(0, -3);
+        System.out.println("2. Максимум среди двух чисел " + max1);
 
-        int diff1 = difference(3, 10);
-        System.out.println("3. Модуль разности " + diff1);
+        int diff1 = difference(3, 12);
+        System.out.println("3. Модуль разницы двух чисел " + diff1);
 
-        int sqare1 = squareArea(3);
-        System.out.println("4.1. Площадь квадрата " + sqare1);
+        int sq1 = squareArea(4);
+        System.out.println("4.1. Площадь квадрата " + sq1);
 
-        int perim1 = squarePerimeter(4);
-        System.out.println("4.2. Периметр квадрата " + perim1);
+        int per1 = squarePerimeter(3);
+        System.out.println("4.2. Периметр квадрата " + per1);
 
-        float min1 = convertSecondsToMinutes(320);
+        double min1 = convertSecondsToMinutes(610);
         System.out.println("5. Минуты " + min1);
 
-        double average1 = averageSpeed(5, 0);
-        System.out.println("6.1. Средняя скорость " + average1);
+        double avg1 = averageSpeed(50, 0);
+        System.out.println("6.1. " + avg1);
 
-        double average2 = averageSpeed(80, 50);
-        System.out.println("6.2. Средняя скорость " + average2);
+        double avg2 = averageSpeed(50, 20);
+        System.out.println("6.2. Средняя скорость " + avg2);
 
-        double hypotenuse1 = findHypotenuse(3, 4);
-        System.out.println("7.1. Гипотенуза " + hypotenuse1);
+        double hup1 = findHypotenuse(3, 4);
+        System.out.println("7.1. Гипотенуза " + hup1);
 
-        double hypotenuse2 = findHypotenuse(30, 40);
-        System.out.println("7.2. Гипотенуза " + hypotenuse2);
+        double hup2 = findHypotenuse(2, 2);
+        System.out.println("7.2. Гипотенуза " + hup2);
 
-        double circle1 = circleCircumference(5);
-        System.out.println("8.1. Длина окружности " + circle1);
+        double cir1 = circleCircumference(2.5);
+        System.out.println("8.1. Длина окружность " + cir1);
 
-        double circle2 = circleCircumference(10);
-        System.out.println("8.2. Длина окружности " + circle2);
+        double cir2 = circleCircumference(10);
+        System.out.println("8.2. Длина окружность " + cir2);
 
-        double part1 = calculatePercentage(100, 25);
-        System.out.println("9.1. Процент от числа " + part1);
+        double pers1 = calculatePercentage(200, 25);
+        System.out.println("9. Вычисление процентов " + pers1);
 
-        double part2 = calculatePercentage(200, 25);
-        System.out.println("9.2. Процент от числа " + part2);
+        double far1 = celsiusToFahrenheit(37);
+        System.out.println("10.1. Градусы Цельсия в Фаренгейты " + far1);
 
-        double degree1 = celsiusToFahrenheit(52);
-        System.out.println("10.1. Градусы Фаренгейт " + degree1);
-
-        double degree2 = fahrenheitToCelsius(100);
-        System.out.println("10.2. Градусы Цельсия " + degree2);
+        double cel1 = fahrenheitToCelsius(80);
+        System.out.println("10.2. Фаренгейты в градусы Цельсия " + cel1);
     }
 
-    public static int add(int x, int y) { //аргументы метода
-        // тело метода
-        return  x + y; // возвращаемое значение из метода
+    public static int add(int x, int y) {
+        return x + y;
     }
 
-    public static int subtract(int x, int y) { //аргументы метода
-        // тело метода
-        return  x - y; // возвращаемое значение из метода
+    public static int subtract(int x, int y) {
+        return x - y;
     }
 
-    public static int multiply(int x, int y) { //аргументы метода
-        // тело метода
-        return  x * y; // возвращаемое значение из метода
+    public static int multiply(int x, int y) {
+        return x * y;
     }
 
-    public static double divide(int x, int y) { //аргументы метода
-        // тело метода
+    public static double divide(int x, int y) {
         return (double) x / y;
     }
 
-    public static int findMax(int a, int b){
-        return Integer.max(a, b);
+    public static int findMax(int a, int b) {
+        return Math.max(a, b);
     }
 
-    public static int difference(int x, int y){
-        return abs(x - y);
+    public static int difference(int x, int y) {
+        return Math.abs(x - y);
     }
 
-    public static int squareArea(int side){
+    public static int squareArea(int side) {
         return side * side;
     }
 
-    public static int squarePerimeter(int side){
+    public static int squarePerimeter(int side) {
         return 4 * side;
     }
 
-    public static float convertSecondsToMinutes(int seconds) {
-        return (float) seconds / 60;
+    public static double convertSecondsToMinutes(int seconds) {
+        return (double) seconds / 60;
     }
 
-    public static double averageSpeed(double distance, double time){
+    public static double averageSpeed(double distance, double time) {
         if (time > 0) {
             return (double) distance / time;
         } else {
-            System.out.println("6.1. Время должно быть больше нуля.");
+            System.out.println("Время должно быть больше нуля");
             return Double.NaN;
+        }
+    }
+
+    public static double findHypotenuse(double a, double b) {
+        return Math.sqrt((Math.pow(a, 2) + Math.pow(b, 2)));
+    }
+
+    public static double circleCircumference(double radius) {
+        return 2 * Math.PI * radius;
+    }
+
+    public static double calculatePercentage(double total, double part) {
+        if (total != 0) {
+            return (part * 100) / total;
+        } else {
+            System.out.println("Общее не должно быть равно нулю");
+            return 0;
         }
 
     }
 
-    public static double findHypotenuse(double a, double b) {
-        return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+    public static double celsiusToFahrenheit(double c) {
+        return (double) (c * 9 / 5) + 32;
     }
 
-    public static double circleCircumference(double radius){
-        return (double) 2 * Math.PI * radius;
-    }
-
-    public static double calculatePercentage(double total, double part){
-        return (double) (part * 100) / total;
-    }
-
-    public static double celsiusToFahrenheit(double с){
-        return (double) с * (9/5) + 32;
-    }
-
-    public static double fahrenheitToCelsius(double f){
-        return (double) (f - 32) * (5/9);
+    public static double fahrenheitToCelsius(double f) {
+        return (double) ((f - 32) * 5 / 9);
     }
 }
